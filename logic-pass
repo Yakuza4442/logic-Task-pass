@@ -1,0 +1,129 @@
+A\1
+Method to remove character from string 
+#include<stdio.h>
+#include<conio.h>
+#include<string.h>
+void removeChar(char * str, char charToRemmove){
+    int i, j;
+    int len = strlen(str);
+    for(i=0; i<len; i++)
+    {
+        if(str[i] == charToRemmove)
+        {
+            for(j=i; j<len; j++)
+            {
+                str[j] = str[j+1];
+            }
+            len--;
+            i--;
+        }
+    }
+    
+}
+
+void main(){
+	 char str[100],ch,c;
+	 int i,j,len;
+	 printf("enter the string : \n");
+	 scanf("%[^\n]%c",str,&c);
+	 printf("enter a char you want to remove : ");
+	 scanf("%c",&ch);
+	 removeChar(str,ch);
+	 printf("String after removing '%c': %s", ch, str);
+	 getch();
+ } 
+Output
+
+enter the string :
+
+Quescol is best
+
+enter a char you want to remove. : S
+
+String after removing 's': Quecol i bet
+
+
+
+A\2
+
+# First, we will take the input:  
+lower_value = int(input ("Please, Enter the Lowest Range Value: "))  
+upper_value = int(input ("Please, Enter the Upper Range Value: "))  
+  
+print ("The Prime Numbers in the range are: ")  
+for number in range (lower_value, upper_value + 1):  
+    if number > 1:  
+        for i in range (2, number):  
+            if (number % i) == 0:  
+                break  
+        else:  
+            print (number)  
+Output
+Please, Enter the Lowest Range Value:  14
+Please, Enter the Upper Range Value:  97
+The Prime Numbers in the range are: 
+17
+19
+23
+29
+31
+37
+41
+43
+47
+53
+59
+61
+67
+71
+73
+79
+83
+89
+97
+
+A\3
+
+# Python program to count occurrences
+# of a given character
+ 
+# Method that return count of the 
+# given character in the string
+
+def count(s, c) :
+
+     
+
+    # Count variable
+
+    res = 0
+
+     
+
+    for i in range(len(s)) :
+
+         
+
+        # Checking character in string
+
+        if (s[i] == c):
+
+            res = res + 1
+
+    return res
+
+     
+
+     
+# Driver code
+
+str= "geeksforgeeks"
+
+c = 'e'
+
+print(count(str, c))
+
+     
+# This code is contributed by "rishabh_jain".
+
+Output 4
